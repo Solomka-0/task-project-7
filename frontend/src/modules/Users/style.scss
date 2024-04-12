@@ -1,0 +1,102 @@
+.users-module {
+  .users {
+    @apply md:grid lg:grid-cols-4 md:grid-cols-3 max-md:flex max-md:flex-col gap-2;
+
+    &__modal-header {
+      @apply relative;
+      @apply min-h-[16px];
+    }
+
+    &__modal-content {
+      @apply flex flex-col gap-2;
+    }
+
+    &__modal-esc {
+      @apply absolute;
+      @apply top-0 right-[-6px];
+      @apply p-1;
+      @apply rounded-full shadow-inner;
+      @apply bg-zinc-50;
+      @apply cursor-pointer;
+
+      img {
+        @apply max-h-[12px] max-w-[12px];
+        filter: brightness(0) saturate(100%) invert(51%) sepia(19%) saturate(13%) hue-rotate(44deg) brightness(96%) contrast(81%);
+      }
+    }
+
+
+    &__modal-wrapper {
+      @apply fixed;
+      @apply top-0 left-0 w-[100%] h-[100%];
+      @apply flex flex-col gap-2 items-center justify-center;
+      @apply z-10;
+      @apply bg-gray-700 bg-opacity-15;
+    }
+
+    &__modal {
+      @apply max-w-[400px] w-[100%];
+      @apply rounded;
+      @apply px-3 pt-2 pb-3;
+      @apply shadow-2xl;
+      @apply bg-white;
+    }
+
+    &__item {
+      transition: all .2s;
+
+      @apply relative;
+      @apply p-2;
+      @apply rounded;
+      @apply shadow-md;
+      @apply bg-gray-100 hover:opacity-90;
+      @apply break-all;
+      @apply text-gray-700 leading-5;
+      @apply cursor-pointer
+    }
+
+    &__item-create {
+      transition: all .2s;
+
+      @apply relative;
+      @apply p-2;
+      @apply rounded;
+      @apply shadow-md;
+      @apply bg-violet-100 hover:bg-violet-200;
+      @apply shadow-inner;
+      @apply break-all;
+      @apply text-blue-400 hover:text-blue-500 leading-5;
+      @apply cursor-pointer;
+      @apply flex items-center justify-center;
+      @apply font-bold;
+    }
+
+    &__item-remove {
+      @apply absolute;
+      @apply right-0 top-0 mr-0.5 mt-0.5;
+      @apply cursor-pointer;
+      @apply p-1;
+      @apply bg-white;
+      @apply rounded-full;
+      @apply max-h-[16px];
+      @apply text-[10px] leading-[6px];
+      @apply hover:bg-gray-100;
+    }
+
+    &__name {
+      @apply text-black;
+    }
+
+    &__sex {
+      @apply text-[10px];
+    }
+
+    &__phone {
+      @apply text-[14px];
+    }
+
+    &__email {
+      @apply text-[14px];
+    }
+  }
+}
